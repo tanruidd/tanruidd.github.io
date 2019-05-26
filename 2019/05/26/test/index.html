@@ -278,6 +278,23 @@
 
 
     
+        <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
+    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
+    <div id="comments">
+        <script>
+            var gitment = new Gitment({
+                owner: 'tanruidd',
+                repo: 'tanruidd.github.io',
+                oauth: {
+                    client_id: 'f3fcb47680ce97045d63',
+                    client_secret: '91e008360906ab95067ba56ba8c719c2cb528407',
+                },
+            })
+            gitment.render('comments')
+        </script>
+    </div>
+
+    
 </section>
         
       </div>
