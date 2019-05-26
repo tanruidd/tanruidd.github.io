@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>天人合一</title>
+  
+  <subtitle>天人合一的博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://tanruidd.github.io/"/>
+  <updated>2019-05-26T07:55:23.354Z</updated>
+  <id>http://tanruidd.github.io/</id>
+  
+  <author>
+    <name>TR</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>草稿测试</title>
+    <link href="http://tanruidd.github.io/2019/05/26/%E8%8D%89%E7%A8%BF%E6%B5%8B%E8%AF%95/"/>
+    <id>http://tanruidd.github.io/2019/05/26/草稿测试/</id>
+    <published>2019-05-26T07:55:23.000Z</published>
+    <updated>2019-05-26T07:55:23.354Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是草稿测试</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这是草稿测试&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo配置</title>
+    <link href="http://tanruidd.github.io/2019/05/26/hexo%E9%85%8D%E7%BD%AE/"/>
+    <id>http://tanruidd.github.io/2019/05/26/hexo配置/</id>
+    <published>2019-05-26T07:17:09.000Z</published>
+    <updated>2019-05-26T08:02:20.164Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: TR //网站标题</span><br><span class="line">subtitle: TR&apos;s Blog //网站副标题</span><br><span class="line">description: 学习永无止境 //网站描述</span><br><span class="line">keywords: //关键字,便于搜索引擎的搜索</span><br><span class="line">author: TR //您的名字</span><br><span class="line">language: zh-Hans //网站使用的语言</span><br><span class="line">timezone: //网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：America/New_York, Japan, 和 UTC 。</span><br></pre></td></tr></table></figure><p>其中，<code>description</code>主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。<code>author</code>参数用于主题显示文章的作者。</p><h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">url: http://tanruidd.github.io //你需要把url改成你的网站域名</span><br><span class="line"></span><br><span class="line">root: / //网站根目录</span><br><span class="line"></span><br><span class="line">permalink: :year/:month/:day/:title/ //文章的永久链接格式, 比如我新建一个文章叫temp.md，那么这个时候他自动生成的地址就是http://yoursite.com/2018/09/05/temp。</span><br><span class="line"></span><br><span class="line">permalink_defaults: //永久链接中各部分的默认值</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: landscape //theme就是选择什么主题，也就是在theme这个文件夹下，在官网上有很多个主题，默认给你安装的是lanscape这个主题。当你需要更换主题时，在官网上下载，把主题的文件放在theme文件夹下，再修改这个参数就可以了。</span><br></pre></td></tr></table></figure><h2 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h2><p>接下来这个deploy就是网站的部署的，repo就是仓库(Repository)的简写。branch选择仓库的哪个分支。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/tanruidd/tanruidd.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><h2 id="layout-布局"><a href="#layout-布局" class="headerlink" title="layout(布局)"></a>layout(布局)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">post //路径source/_posts</span><br><span class="line">page //路径source</span><br><span class="line">draft //路径source/_drafts</span><br></pre></td></tr></table></figure><p>如果你想另起一页，那么可以使用page</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page board</span><br></pre></td></tr></table></figure><p>系统会自动给你在source文件夹下创建一个board文件夹，以及board文件夹中的index.md，这样你访问的board对应的链接就是<code>http://xxx.xxx/board</code></p><p><img src="/2019/05/26/hexo配置/1558856957188.png" alt="55885695718"></p><p>draft是草稿的意思，也就是你如果想写文章，又不希望被看到，那么可以</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new draft mypage</span><br></pre></td></tr></table></figure><p>这样会在source/_draft中新建一个newpage.md文件，如果你的草稿文件写的过程中，想要预览一下，那么可以使用</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server --draft</span><br></pre></td></tr></table></figure><p>在本地端口中开启服务预览。</p><p>如果你的草稿文件写完了，想要发表到post中</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish draft newpage</span><br></pre></td></tr></table></figure><p>就会自动把newpage.md发送到post中。</p><h2 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Site&quot;&gt;&lt;a href=&quot;#Site&quot; class=&quot;headerlink&quot; title=&quot;Site&quot;&gt;&lt;/a&gt;Site&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pr
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://tanruidd.github.io/2019/05/26/test/"/>
+    <id>http://tanruidd.github.io/2019/05/26/test/</id>
+    <published>2019-05-26T06:33:01.000Z</published>
+    <updated>2019-05-26T06:49:18.371Z</updated>
+    
+    <content type="html"><![CDATA[<p>随便尝试一下</p><p><img src="/2019/05/26/test/1558852550683.png" alt="55885255068"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;随便尝试一下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/05/26/test/1558852550683.png&quot; alt=&quot;55885255068&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo命令</title>
+    <link href="http://tanruidd.github.io/2019/05/26/hexo%E5%91%BD%E4%BB%A4/"/>
+    <id>http://tanruidd.github.io/2019/05/26/hexo命令/</id>
+    <published>2019-05-26T06:18:18.000Z</published>
+    <updated>2019-05-26T07:16:41.433Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">官方文档</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/configuration&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo图片问题</title>
+    <link href="http://tanruidd.github.io/2019/05/26/hexo%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/"/>
+    <id>http://tanruidd.github.io/2019/05/26/hexo图片问题/</id>
+    <published>2019-05-26T06:16:48.000Z</published>
+    <updated>2019-05-26T07:02:20.170Z</updated>
+    
+    <content type="html"><![CDATA[<p>上传图片不能显示</p><p>修改_config.yml</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure><p>Hexo 提供了一种更方便管理 Asset 的设定：<code>post_asset_folder</code></p><p>当您设置<code>post_asset_folder</code>为<code>true</code>参数后，在建立文件时，Hexo会自动建立一个与文章同名的文件夹，您可以把与该文章相关的所有资源都放到那个文件夹，如此一来，您便可以更方便的使用资源。</p><p>在hexo的目录下执行<code>npm install hexo-asset-image --save</code> 下载一个插件。</p><p><code>hexo new &quot;xxx&quot;</code>新建一个测试文件</p><p>会发现_post文件夹下还有一个同名文件夹。</p><p>这是需要你的图片路径是</p><p><img src="/2019/05/26/hexo图片问题/1558854098058.png" alt="55885409805"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;上传图片不能显示&lt;/p&gt;
+&lt;p&gt;修改_config.yml&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一步步搭建博客</title>
+    <link href="http://tanruidd.github.io/2019/05/26/github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://tanruidd.github.io/2019/05/26/github搭建博客/</id>
+    <published>2019-05-26T06:04:32.181Z</published>
+    <updated>2019-05-26T07:06:17.057Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言和准备"><a href="#前言和准备" class="headerlink" title="前言和准备"></a>前言和准备</h2><p>好久之前搭建过一次博客，现在已经忘的差不多了，借此重新搭建一下，顺便回顾一下。</p><ul><li><p>首先我的github上面有我之前的博客项目，不过我想重新来一次，就先clone下来，然后删除该项目。</p><p><img src="/2019/05/26/github搭建博客/1558840289506.png" alt="55884028950"><img src="/2019/05/26/github搭建博客/1558840367084.png" alt="55884036708"></p><p>​</p></li><li><p>找到该项目的settings下的Delete this repository。</p></li></ul><p><img src="/2019/05/26/github搭建博客/1558841324720.png" alt="55884132472"></p><p><img src="/2019/05/26/github搭建博客/1558841387576.png" alt="55884138757"></p><ul><li>然后点击确认删除该项目</li></ul><p><img src="/2019/05/26/github搭建博客/1558840555470.png" alt="55884055547"></p><ul><li><p>需要先装两个软件 git和node.js</p><p><img src="/2019/05/26/github搭建博客/1558842485561.png" alt="55884248556"></p><p>这里注意git的安装</p><p><img src="/2019/05/26/github搭建博客/1558842855843.png" alt="55884285584"></p><p>这样就可以在cmd中操作了，附一个git的安装教程<a href="https://www.cnblogs.com/wj-1314/p/7993819.html" target="_blank" rel="noopener">链接</a>，再附一个node.js的安装教程<a href="https://blog.csdn.net/muzidigbig/article/details/80493880" target="_blank" rel="noopener">链接</a>。</p></li><li><p>装好之后可以在命令窗口（Win+R， 输入CMD，回车）检查一下，输入和结果如下图所示就安装完成了。</p><p><img src="/2019/05/26/github搭建博客/1558842700273.png" alt="55884270027"></p></li></ul><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul><li><p>接着对git进行配置，创建ssh key。</p><p>在git中输入ssh-keygen -t rsa，接着按三次回车：</p><p><img src="/2019/05/26/github搭建博客/1558843950771.png" alt="55884395077"></p><p>就会在相应位置生成id_rsa和id_rsa.pub这两个文件，前者是密钥，后者是公钥，用记事本打开id_rsa.pub，复制其中的全部内容，添加到GitHub上，这样本地的id_rsa密钥就可以和GitHub上的id_rsa.pub公钥进行配对，授权成功。</p><p><img src="/2019/05/26/github搭建博客/1558844989545.png" alt="55884498954"></p><p><img src="/2019/05/26/github搭建博客/1558845068896.png" alt="55884506889"></p></li><li><p>SSH key添加之后，就可以在本机输入ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>进行测试</p><p><img src="/2019/05/26/github搭建博客/1558845306806.png" alt="55884530680"></p><p>可以输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure><p>​</p><p><img src="/2019/05/26/github搭建博客/1558849240422.png" alt="55884924042"></p><p>如果不行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure><p>​</p></li></ul><h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>任意新建一个文件夹，比如blog，然后cd到该路径下，或者直接在该文件夹下右键然后git Bash Here</p><p><img src="/2019/05/26/github搭建博客/1558845515189.png" alt="55884551518"></p><p>输入npm install -g hexo安装hexo，等待一段时间即可。</p><p>接着输入hexo -v检查是否安装成功。</p><p><img src="/2019/05/26/github搭建博客/1558846056259.png" alt="55884605625"></p><p>接着初始化hexo，输入hexo init</p><p><img src="/2019/05/26/github搭建博客/1558846240757.png" alt="55884624075"></p><p>再安装npm，输入npm -install</p><p><img src="/2019/05/26/github搭建博客/1558846652672.png" alt="55884665267"></p><p>我们的目录下就有下面的文件</p><p><img src="/2019/05/26/github搭建博客/1558847361557.png" alt="55884736155"></p><p><a href="https://blog.csdn.net/abc_12366/article/details/87864623" target="_blank" rel="noopener">每个目录及文件介绍</a></p><p>输入hexo s 打开hexo服务器，输入<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>我们可以看到如下页面：</p><p><img src="/2019/05/26/github搭建博客/1558847261797.png" alt="55884726179"></p><p>hexo g之后出现public文件夹</p><h2 id="github创建个人仓库"><a href="#github创建个人仓库" class="headerlink" title="github创建个人仓库"></a>github创建个人仓库</h2><p>创建一个和你用户名相同的仓库，后面加github.io，只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxx.github.io。</p><p><img src="/2019/05/26/github搭建博客/1558847856350.png" alt="55884785635"></p><p><img src="/2019/05/26/github搭建博客/1558848274662.png" alt="55884827466"></p><h2 id="将hexo部署到github"><a href="#将hexo部署到github" class="headerlink" title="将hexo部署到github"></a>将hexo部署到github</h2><p>打开站点配置文件 <code>_config.yml</code>，翻到最后，修改为</p><p><img src="/2019/05/26/github搭建博客/1558848404769.png" alt="55884840476"></p><p>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p><p><img src="/2019/05/26/github搭建博客/1558848500026.png" alt="55884850002"></p><p>然后输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean //清除了你之前生成的东西</span><br><span class="line">hexo generate //生成静态文章，可以用 hexo g缩写</span><br><span class="line">hexo deploy //部署文章，可以用hexo d缩写</span><br></pre></td></tr></table></figure><p><img src="/2019/05/26/github搭建博客/1558848599198.png" alt="55884859919"></p><p><img src="/2019/05/26/github搭建博客/1558848630743.png" alt="55884863074"></p><p><img src="/2019/05/26/github搭建博客/1558848723151.png" alt="55884872315"></p><p>在输入hexo deploy时可能会需要登录，输入用户名和密码即可。</p><p><img src="/2019/05/26/github搭建博客/1558848687064.png" alt="55884868706"></p><p>然后就能在GitHub上看到自己的项目了，也可以在<a href="http://tanruidd.github.io看到博客了。" target="_blank" rel="noopener">http://tanruidd.github.io看到博客了。</a></p><p><img src="/2019/05/26/github搭建博客/1558848874311.png" alt="55884887431"></p><h2 id="设置个人域名"><a href="#设置个人域名" class="headerlink" title="设置个人域名"></a>设置个人域名</h2><p>注册一个阿里云账户，在阿里云买一个域名，我买的是.top结尾的，比较便宜。</p><p>选择域名</p><p><img src="/2019/05/26/github搭建博客/1558849399651.png" alt="55884939965"></p><p>点解析 解析设置 </p><p><img src="/2019/05/26/github搭建博客/1558849460093.png" alt="55884946009"></p><p>添加解析 ip改成github的ip，ip从cmd中ping一下就得到了 </p><p><img src="/2019/05/26/github搭建博客/1558849924612.png" alt="55884992461"></p><p><img src="/2019/05/26/github搭建博客/1558849902139.png" alt="55884990213"></p><p>登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名<code>tanruidd.top</code></p><p><img src="/2019/05/26/github搭建博客/1558849668348.png" alt="55884966834"></p><p>然后在你的博客文件source中创建一个名为CNAME文件，不要后缀，内容为你的域名。</p><p>最后在在git中输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><p>等待一段时间就可以在自己的域名看见博客了。</p><p><img src="/2019/05/26/github搭建博客/1558850304242.png" alt="55885030424"></p><p>然后就是对博客的配置了，比如修改主题，可以根据需求自行修改。</p><p>可以查找hexo命令。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言和准备&quot;&gt;&lt;a href=&quot;#前言和准备&quot; class=&quot;headerlink&quot; title=&quot;前言和准备&quot;&gt;&lt;/a&gt;前言和准备&lt;/h2&gt;&lt;p&gt;好久之前搭建过一次博客，现在已经忘的差不多了，借此重新搭建一下，顺便回顾一下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;首先
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://tanruidd.github.io/2019/05/26/hello-world/"/>
+    <id>http://tanruidd.github.io/2019/05/26/hello-world/</id>
+    <published>2019-05-26T04:48:53.199Z</published>
+    <updated>2019-05-26T04:48:53.199Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
