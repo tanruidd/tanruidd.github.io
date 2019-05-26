@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://tanruidd.github.io/2019/05/26/hexo配置/1558879572285.png">
 <meta property="og:image" content="http://tanruidd.github.io/2019/05/26/hexo配置/1558882319438.png">
 <meta property="og:image" content="http://tanruidd.github.io/2019/05/26/hexo配置/1558882467933.png">
-<meta property="og:updated_time" content="2019-05-26T14:59:54.649Z">
+<meta property="og:updated_time" content="2019-05-26T15:41:42.963Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo配置">
 <meta name="twitter:description" content="Site1234567title: TR //网站标题subtitle: TR&amp;apos;s Blog //网站副标题description: 学习永无止境 //网站描述keywords: //关键字,便于搜索引擎的搜索author: TR //您的名字language: zh-Hans //网站使用的语言timezone: //网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：Amer">
@@ -103,12 +103,6 @@
                         <a title="Github" target="_blank" href="//github.com/tanruidd">
                             <i class="fa fa-github fa-2x"></i></a>
                     
-                        <a title="Weibo" target="_blank" href="//weibo.com/WongMinHo">
-                            <i class="fa fa-weibo fa-2x"></i></a>
-                    
-                        <a title="Twitter" target="_blank" href="//twitter.com/huangminhow">
-                            <i class="fa fa-twitter fa-2x"></i></a>
-                    
                 </div>
             </nav>
         </div>
@@ -185,10 +179,12 @@
 <p>在\miho\layout_partial\plugins\comments新建valine.ejs文件，输入下面内容。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"vcomment"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"comment"</span>&gt;&lt;/div&gt; </span><br><span class="line">&lt;script src=<span class="string">"//cdn1.lncld.net/static/js/3.0.4/av-min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=<span class="string">"//unpkg.com/valine/dist/Valine.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">   <span class="keyword">var</span> notify = <span class="string">'&lt;%= theme.valine.notify %&gt;'</span> == <span class="literal">true</span> ? <span class="literal">true</span> : <span class="literal">false</span>;</span><br><span class="line">   <span class="keyword">var</span> verify = <span class="string">'&lt;%= theme.valine.verify %&gt;'</span> == <span class="literal">true</span> ? <span class="literal">true</span> : <span class="literal">false</span>;</span><br><span class="line">    <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Valine(&#123;</span><br><span class="line">            el: <span class="string">'.comment'</span>,</span><br><span class="line">            notify: notify,</span><br><span class="line">            verify: verify,</span><br><span class="line">            app_id: <span class="string">"&lt;%= theme.valine.appid %&gt;"</span>,</span><br><span class="line">            app_key: <span class="string">"&lt;%= theme.valine.appkey %&gt;"</span>,</span><br><span class="line">            placeholder: <span class="string">"&lt;%= theme.valine.placeholder %&gt;"</span>,</span><br><span class="line">            avatar:<span class="string">"&lt;%= theme.valine.avatar %&gt;"</span></span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 <p>然后生成部署一下就行了。</p>
+<h2 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SEO是由英文Search Engine Optimization缩写而来， 中文意译为“搜索引擎优化”。SEO是指通过站内优化比如网站结构调整、网站内容建设、网站代码优化等以及站外优化。</span><br></pre></td></tr></table></figure>
+<p>推广是很麻烦的事情，怎么样别人才能知道我们呢，首先需要让搜索引擎收录你的这个网站，别人才能搜索的到。那么这就需要SEO优化了。</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年05月26日 22:59</p>
+        <p>最后更新： 2019年05月26日 23:41</p>
         <p>原始链接： <a class="post-url" href="/2019/05/26/hexo配置/" title="hexo配置">http://tanruidd.github.io/2019/05/26/hexo配置/</a></p>
         <footer>
             <a href="http://tanruidd.github.io">
@@ -299,7 +295,7 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Site"><span class="post-toc-text">Site</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#URL"><span class="post-toc-text">URL</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Deployment"><span class="post-toc-text">Deployment</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#layout-布局"><span class="post-toc-text">layout(布局)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#更改主题"><span class="post-toc-text">更改主题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置评论系统"><span class="post-toc-text">设置评论系统</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Site"><span class="post-toc-text">Site</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#URL"><span class="post-toc-text">URL</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Deployment"><span class="post-toc-text">Deployment</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#layout-布局"><span class="post-toc-text">layout(布局)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#更改主题"><span class="post-toc-text">更改主题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置评论系统"><span class="post-toc-text">设置评论系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#SEO优化"><span class="post-toc-text">SEO优化</span></a></li></ol>
         </nav>
     </aside>
     
