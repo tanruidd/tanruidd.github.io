@@ -255,23 +255,33 @@
 
 
     
-        <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
-    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
-    <div id="comments">
-        <script>
-            var gitment = new Gitment({
-                owner: 'tanruidd',
-                repo: 'tanruidd.github.io',
-                oauth: {
-                    client_id: 'f3fcb47680ce97045d63',
-                    client_secret: '91e008360906ab95067ba56ba8c719c2cb528407',
-                },
-            })
-            gitment.render('comments')
-        </script>
-    </div>
 
-    
+
+
+<section id="comments" class="comments">
+  <style>
+    .comments{margin:30px;padding:10px;background:#fff}
+    @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+  </style>
+  <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "EmL6L8c2v3pQkUGQkjpRlI7u-gzGzoHsz",
+            app_key: "DLenr71tkgS7ev93t3jK7hHu",
+            placeholder: "来啊，快活啊!",
+            avatar:""
+        });
+    }
+</script>
+  </section>
 </section>
         
       </div>

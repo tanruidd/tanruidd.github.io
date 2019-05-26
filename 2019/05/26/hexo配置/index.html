@@ -16,7 +16,9 @@
 <meta property="og:description" content="Site1234567title: TR //网站标题subtitle: TR&amp;apos;s Blog //网站副标题description: 学习永无止境 //网站描述keywords: //关键字,便于搜索引擎的搜索author: TR //您的名字language: zh-Hans //网站使用的语言timezone: //网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：Amer">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://tanruidd.github.io/2019/05/26/hexo配置/1558856957188.png">
-<meta property="og:updated_time" content="2019-05-26T08:34:14.876Z">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/hexo配置/1558879533328.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/hexo配置/1558879572285.png">
+<meta property="og:updated_time" content="2019-05-26T14:06:40.926Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo配置">
 <meta name="twitter:description" content="Site1234567title: TR //网站标题subtitle: TR&amp;apos;s Blog //网站副标题description: 学习永无止境 //网站描述keywords: //关键字,便于搜索引擎的搜索author: TR //您的名字language: zh-Hans //网站使用的语言timezone: //网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：Amer">
@@ -161,10 +163,16 @@
 <p>就会自动把newpage.md发送到post中。</p>
 <h2 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h2><p>我找到了一个<a href="https://blog.minhow.com/2017/08/01/blog/installation-configuration/" target="_blank" rel="noopener">miho主题</a>，看着还不错。</p>
 <p>基本上创建主题的人都会有教程的，跟着做就好了。</p>
+<h2 id="设置评论系统"><a href="#设置评论系统" class="headerlink" title="设置评论系统"></a>设置评论系统</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gitment: </span><br><span class="line">  owner: tanruidd   #你的 GitHub ID</span><br><span class="line">  repo: &apos;tanruidd.github.io&apos;   #存储评论的 repo</span><br><span class="line">  client_id: &apos;&apos; #client ID</span><br><span class="line">  client_secret: &apos;&apos; #client secret</span><br></pre></td></tr></table></figure>
+<p>我是通过github的gitmet设置的评论系统</p>
+<p>需要先在setting中最后一个建立一个OAuth App</p>
+<p><img src="/2019/05/26/hexo配置/1558879533328.png" alt="55887953332"></p>
+<p><img src="/2019/05/26/hexo配置/1558879572285.png" alt="55887957228"></p>
+<p>将生成的id和secret放入相应位置即可。</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年05月26日 16:34</p>
+        <p>最后更新： 2019年05月26日 22:06</p>
         <p>原始链接： <a class="post-url" href="/2019/05/26/hexo配置/" title="hexo配置">http://tanruidd.github.io/2019/05/26/hexo配置/</a></p>
         <footer>
             <a href="http://tanruidd.github.io">
@@ -275,7 +283,7 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Site"><span class="post-toc-text">Site</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#URL"><span class="post-toc-text">URL</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Deployment"><span class="post-toc-text">Deployment</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#layout-布局"><span class="post-toc-text">layout(布局)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#更改主题"><span class="post-toc-text">更改主题</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Site"><span class="post-toc-text">Site</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#URL"><span class="post-toc-text">URL</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Deployment"><span class="post-toc-text">Deployment</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#layout-布局"><span class="post-toc-text">layout(布局)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#更改主题"><span class="post-toc-text">更改主题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置评论系统"><span class="post-toc-text">设置评论系统</span></a></li></ol>
         </nav>
     </aside>
     
@@ -303,23 +311,33 @@
 
 
     
-        <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
-    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
-    <div id="comments">
-        <script>
-            var gitment = new Gitment({
-                owner: 'tanruidd',
-                repo: 'tanruidd.github.io',
-                oauth: {
-                    client_id: 'f3fcb47680ce97045d63',
-                    client_secret: '91e008360906ab95067ba56ba8c719c2cb528407',
-                },
-            })
-            gitment.render('comments')
-        </script>
-    </div>
 
-    
+
+
+<section id="comments" class="comments">
+  <style>
+    .comments{margin:30px;padding:10px;background:#fff}
+    @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+  </style>
+  <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "EmL6L8c2v3pQkUGQkjpRlI7u-gzGzoHsz",
+            app_key: "DLenr71tkgS7ev93t3jK7hHu",
+            placeholder: "来啊，快活啊!",
+            avatar:""
+        });
+    }
+</script>
+  </section>
 </section>
         
       </div>
