@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>一步步搭建博客 | trtan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Miho,TR,博客">
+  
+  <meta name="description" content="前言和准备好久之前搭建过一次博客，现在已经忘的差不多了，借此重新搭建一下，顺便回顾一下。  首先我的github上面有我之前的博客项目，不过我想重新来一次，就先clone下来，然后删除该项目。  ​  找到该项目的settings下的Delete this repository。      然后点击确认删除该项目    需要先装两个软件 git和node.js  这里注意git的安装  这样就可以">
+<meta name="keywords" content="博客,技术,trtan">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一步步搭建博客">
+<meta property="og:url" content="http://tanruidd.github.io/2019/05/26/github搭建博客/index.html">
+<meta property="og:site_name" content="trtan">
+<meta property="og:description" content="前言和准备好久之前搭建过一次博客，现在已经忘的差不多了，借此重新搭建一下，顺便回顾一下。  首先我的github上面有我之前的博客项目，不过我想重新来一次，就先clone下来，然后删除该项目。  ​  找到该项目的settings下的Delete this repository。      然后点击确认删除该项目    需要先装两个软件 git和node.js  这里注意git的安装  这样就可以">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558840289506.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558840367084.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558841324720.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558841387576.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558840555470.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558842485561.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558842855843.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558842700273.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558843950771.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558844989545.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558845068896.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558845306806.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558849240422.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558845515189.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558846056259.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558846240757.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558846652672.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558847361557.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558847261797.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558847856350.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558848274662.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558848404769.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558848500026.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558848599198.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558848630743.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558848723151.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558848687064.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558848874311.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558849399651.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558849460093.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558849924612.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558849902139.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558849668348.png">
+<meta property="og:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558850304242.png">
+<meta property="og:updated_time" content="2019-05-26T07:06:17.057Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一步步搭建博客">
+<meta name="twitter:description" content="前言和准备好久之前搭建过一次博客，现在已经忘的差不多了，借此重新搭建一下，顺便回顾一下。  首先我的github上面有我之前的博客项目，不过我想重新来一次，就先clone下来，然后删除该项目。  ​  找到该项目的settings下的Delete this repository。      然后点击确认删除该项目    需要先装两个软件 git和node.js  这里注意git的安装  这样就可以">
+<meta name="twitter:image" content="http://tanruidd.github.io/2019/05/26/github搭建博客/1558840289506.png">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">trtan的技术博客</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        trtan的技术博客
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        学习永无止境
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//tanruidd.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/tanruidd">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-github搭建博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      一步步搭建博客
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-05-26
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h2 id="前言和准备"><a href="#前言和准备" class="headerlink" title="前言和准备"></a>前言和准备</h2><p>好久之前搭建过一次博客，现在已经忘的差不多了，借此重新搭建一下，顺便回顾一下。</p>
+<ul>
+<li><p>首先我的github上面有我之前的博客项目，不过我想重新来一次，就先clone下来，然后删除该项目。</p>
+<p><img src="/2019/05/26/github搭建博客/1558840289506.png" alt="55884028950"><img src="/2019/05/26/github搭建博客/1558840367084.png" alt="55884036708"></p>
+<p>​</p>
+</li>
+<li><p>找到该项目的settings下的Delete this repository。</p>
+</li>
+</ul>
+<p><img src="/2019/05/26/github搭建博客/1558841324720.png" alt="55884132472"></p>
+<p><img src="/2019/05/26/github搭建博客/1558841387576.png" alt="55884138757"></p>
+<ul>
+<li>然后点击确认删除该项目</li>
+</ul>
+<p><img src="/2019/05/26/github搭建博客/1558840555470.png" alt="55884055547"></p>
+<ul>
+<li><p>需要先装两个软件 git和node.js</p>
+<p><img src="/2019/05/26/github搭建博客/1558842485561.png" alt="55884248556"></p>
+<p>这里注意git的安装</p>
+<p><img src="/2019/05/26/github搭建博客/1558842855843.png" alt="55884285584"></p>
+<p>这样就可以在cmd中操作了，附一个git的安装教程<a href="https://www.cnblogs.com/wj-1314/p/7993819.html" target="_blank" rel="noopener">链接</a>，再附一个node.js的安装教程<a href="https://blog.csdn.net/muzidigbig/article/details/80493880" target="_blank" rel="noopener">链接</a>。</p>
+</li>
+<li><p>装好之后可以在命令窗口（Win+R， 输入CMD，回车）检查一下，输入和结果如下图所示就安装完成了。</p>
+<p><img src="/2019/05/26/github搭建博客/1558842700273.png" alt="55884270027"></p>
+</li>
+</ul>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul>
+<li><p>接着对git进行配置，创建ssh key。</p>
+<p>在git中输入ssh-keygen -t rsa，接着按三次回车：</p>
+<p><img src="/2019/05/26/github搭建博客/1558843950771.png" alt="55884395077"></p>
+<p>就会在相应位置生成id_rsa和id_rsa.pub这两个文件，前者是密钥，后者是公钥，用记事本打开id_rsa.pub，复制其中的全部内容，添加到GitHub上，这样本地的id_rsa密钥就可以和GitHub上的id_rsa.pub公钥进行配对，授权成功。</p>
+<p><img src="/2019/05/26/github搭建博客/1558844989545.png" alt="55884498954"></p>
+<p><img src="/2019/05/26/github搭建博客/1558845068896.png" alt="55884506889"></p>
+</li>
+<li><p>SSH key添加之后，就可以在本机输入ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>进行测试</p>
+<p><img src="/2019/05/26/github搭建博客/1558845306806.png" alt="55884530680"></p>
+<p>可以输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+<p>​</p>
+<p><img src="/2019/05/26/github搭建博客/1558849240422.png" alt="55884924042"></p>
+<p>如果不行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>任意新建一个文件夹，比如blog，然后cd到该路径下，或者直接在该文件夹下右键然后git Bash Here</p>
+<p><img src="/2019/05/26/github搭建博客/1558845515189.png" alt="55884551518"></p>
+<p>输入npm install -g hexo安装hexo，等待一段时间即可。</p>
+<p>接着输入hexo -v检查是否安装成功。</p>
+<p><img src="/2019/05/26/github搭建博客/1558846056259.png" alt="55884605625"></p>
+<p>接着初始化hexo，输入hexo init</p>
+<p><img src="/2019/05/26/github搭建博客/1558846240757.png" alt="55884624075"></p>
+<p>再安装npm，输入npm -install</p>
+<p><img src="/2019/05/26/github搭建博客/1558846652672.png" alt="55884665267"></p>
+<p>我们的目录下就有下面的文件</p>
+<p><img src="/2019/05/26/github搭建博客/1558847361557.png" alt="55884736155"></p>
+<p><a href="https://blog.csdn.net/abc_12366/article/details/87864623" target="_blank" rel="noopener">每个目录及文件介绍</a></p>
+<p>输入hexo s 打开hexo服务器，输入<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>我们可以看到如下页面：</p>
+<p><img src="/2019/05/26/github搭建博客/1558847261797.png" alt="55884726179"></p>
+<p>hexo g之后出现public文件夹</p>
+<h2 id="github创建个人仓库"><a href="#github创建个人仓库" class="headerlink" title="github创建个人仓库"></a>github创建个人仓库</h2><p>创建一个和你用户名相同的仓库，后面加github.io，只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxx.github.io。</p>
+<p><img src="/2019/05/26/github搭建博客/1558847856350.png" alt="55884785635"></p>
+<p><img src="/2019/05/26/github搭建博客/1558848274662.png" alt="55884827466"></p>
+<h2 id="将hexo部署到github"><a href="#将hexo部署到github" class="headerlink" title="将hexo部署到github"></a>将hexo部署到github</h2><p>打开站点配置文件 <code>_config.yml</code>，翻到最后，修改为</p>
+<p><img src="/2019/05/26/github搭建博客/1558848404769.png" alt="55884840476"></p>
+<p>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
+<p><img src="/2019/05/26/github搭建博客/1558848500026.png" alt="55884850002"></p>
+<p>然后输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean //清除了你之前生成的东西</span><br><span class="line">hexo generate //生成静态文章，可以用 hexo g缩写</span><br><span class="line">hexo deploy //部署文章，可以用hexo d缩写</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/26/github搭建博客/1558848599198.png" alt="55884859919"></p>
+<p><img src="/2019/05/26/github搭建博客/1558848630743.png" alt="55884863074"></p>
+<p><img src="/2019/05/26/github搭建博客/1558848723151.png" alt="55884872315"></p>
+<p>在输入hexo deploy时可能会需要登录，输入用户名和密码即可。</p>
+<p><img src="/2019/05/26/github搭建博客/1558848687064.png" alt="55884868706"></p>
+<p>然后就能在GitHub上看到自己的项目了，也可以在<a href="http://tanruidd.github.io看到博客了。" target="_blank" rel="noopener">http://tanruidd.github.io看到博客了。</a></p>
+<p><img src="/2019/05/26/github搭建博客/1558848874311.png" alt="55884887431"></p>
+<h2 id="设置个人域名"><a href="#设置个人域名" class="headerlink" title="设置个人域名"></a>设置个人域名</h2><p>注册一个阿里云账户，在阿里云买一个域名，我买的是.top结尾的，比较便宜。</p>
+<p>选择域名</p>
+<p><img src="/2019/05/26/github搭建博客/1558849399651.png" alt="55884939965"></p>
+<p>点解析 解析设置 </p>
+<p><img src="/2019/05/26/github搭建博客/1558849460093.png" alt="55884946009"></p>
+<p>添加解析 ip改成github的ip，ip从cmd中ping一下就得到了 </p>
+<p><img src="/2019/05/26/github搭建博客/1558849924612.png" alt="55884992461"></p>
+<p><img src="/2019/05/26/github搭建博客/1558849902139.png" alt="55884990213"></p>
+<p>登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名<code>tanruidd.top</code></p>
+<p><img src="/2019/05/26/github搭建博客/1558849668348.png" alt="55884966834"></p>
+<p>然后在你的博客文件source中创建一个名为CNAME文件，不要后缀，内容为你的域名。</p>
+<p>最后在在git中输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>等待一段时间就可以在自己的域名看见博客了。</p>
+<p><img src="/2019/05/26/github搭建博客/1558850304242.png" alt="55885030424"></p>
+<p>然后就是对博客的配置了，比如修改主题，可以根据需求自行修改。</p>
+<p>可以查找hexo命令。</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年05月26日 15:06</p>
+        <p>原始链接： <a class="post-url" href="/2019/05/26/github搭建博客/" title="一步步搭建博客">http://tanruidd.github.io/2019/05/26/github搭建博客/</a></p>
+        <footer>
+            <a href="http://tanruidd.github.io">
+                <img src="/images/logo.png" alt="trtan">
+                trtan
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://tanruidd.github.io/2019/05/26/github搭建博客/&title=《一步步搭建博客》 — trtan&pic=http://tanruidd.github.ioimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://tanruidd.github.io/2019/05/26/github搭建博客/&title=《一步步搭建博客》 — trtan&source=学习永无止境" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://tanruidd.github.io/2019/05/26/github搭建博客/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《一步步搭建博客》 — trtan&url=http://tanruidd.github.io/2019/05/26/github搭建博客/&via=http://tanruidd.github.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://tanruidd.github.io/2019/05/26/github搭建博客/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://tanruidd.github.io/2019/05/26/github搭建博客/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言和准备"><span class="post-toc-text">前言和准备</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置"><span class="post-toc-text">配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装hexo"><span class="post-toc-text">安装hexo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#github创建个人仓库"><span class="post-toc-text">github创建个人仓库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#将hexo部署到github"><span class="post-toc-text">将hexo部署到github</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置个人域名"><span class="post-toc-text">设置个人域名</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2019/05/26/hexo图片问题/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          hexo图片问题
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2019/05/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Hello World</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+
+
+
+<section id="comments" class="comments">
+  <style>
+    .comments{margin:30px;padding:10px;background:#fff}
+    @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+  </style>
+  <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "NQwmJS5F56MehSPpnbS9ie2h-gzGzoHsz",
+            app_key: "1Lr1u6sKBU9xAt8s2JdwY0uE",
+            placeholder: "来啊，快活啊!",
+            avatar:""
+        });
+    }
+</script>
+  </section>
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2020 trtan<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://tanruidd.github.io",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 0
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Java/">Java</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/First/" style="font-size: 10px;">First</a> <a href="/tags/Java正则/" style="font-size: 10px;">Java正则</a> <a href="/tags/Second/" style="font-size: 10px;">Second</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/First/" style="font-size: 10px;">First</a> <a href="/tags/Java正则/" style="font-size: 10px;">Java正则</a> <a href="/tags/Second/" style="font-size: 10px;">Second</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
