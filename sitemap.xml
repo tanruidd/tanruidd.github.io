@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tanruidd.github.io/about/index.html</loc>
+    
+    <lastmod>2020-06-14T00:30:14.562Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tanruidd.github.io/2020/06/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
     
     <lastmod>2020-06-13T09:47:08.000Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>http://tanruidd.github.io/2019/05/26/%E6%96%B0%E4%B8%BB%E9%A2%98%E6%9D%A5%E4%BA%86/</loc>
     
     <lastmod>2019-05-26T09:55:05.526Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tanruidd.github.io/about/index.html</loc>
-    
-    <lastmod>2019-05-26T07:59:29.358Z</lastmod>
     
   </url>
   
