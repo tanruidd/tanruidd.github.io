@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tanruidd.github.io/2020/07/04/leetcode42-Trapping-Rain-Water/</loc>
+    
+    <lastmod>2020-07-04T14:12:25.753Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tanruidd.github.io/about/index.html</loc>
     
     <lastmod>2020-06-14T00:30:14.562Z</lastmod>
