@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>leetcode-1368 | trtan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Miho,TR,博客">
+  
+  <meta name="description" content="leetcode1368-Minimum Cost to Make at Least One Valid Path in a Grid1、题目大意给定m*n个格子，grid[m][n]，对于每个格子grid[i][j]值为1~4  1代表往右走，即下一个格子为grid[i][j + 1] 2代表往左走，即下一个格子为grid[i][j - 1] 3代表往下走，即下一个格子为grid[i + 1][">
+<meta name="keywords" content="leetcode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="leetcode-1368">
+<meta property="og:url" content="http://tanruidd.github.io/2020/07/14/leetcode-1368/index.html">
+<meta property="og:site_name" content="trtan">
+<meta property="og:description" content="leetcode1368-Minimum Cost to Make at Least One Valid Path in a Grid1、题目大意给定m*n个格子，grid[m][n]，对于每个格子grid[i][j]值为1~4  1代表往右走，即下一个格子为grid[i][j + 1] 2代表往左走，即下一个格子为grid[i][j - 1] 3代表往下走，即下一个格子为grid[i + 1][">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://tanruidd.github.io/2020/07/14/leetcode-1368/D:/blog/hexo/source/_posts/leetcode-1368/grid1.png">
+<meta property="og:updated_time" content="2020-07-14T13:01:37.429Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="leetcode-1368">
+<meta name="twitter:description" content="leetcode1368-Minimum Cost to Make at Least One Valid Path in a Grid1、题目大意给定m*n个格子，grid[m][n]，对于每个格子grid[i][j]值为1~4  1代表往右走，即下一个格子为grid[i][j + 1] 2代表往左走，即下一个格子为grid[i][j - 1] 3代表往下走，即下一个格子为grid[i + 1][">
+<meta name="twitter:image" content="http://tanruidd.github.io/2020/07/14/leetcode-1368/D:/blog/hexo/source/_posts/leetcode-1368/grid1.png">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">trtan的技术博客</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        trtan的技术博客
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        学习永无止境
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="首页" target="_blank" href="//tanruidd.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/tanruidd">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-leetcode-1368" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      leetcode-1368
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2020-07-14
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="leetcode1368-Minimum-Cost-to-Make-at-Least-One-Valid-Path-in-a-Grid"><a href="#leetcode1368-Minimum-Cost-to-Make-at-Least-One-Valid-Path-in-a-Grid" class="headerlink" title="leetcode1368-Minimum Cost to Make at Least One Valid Path in a Grid"></a>leetcode1368-Minimum Cost to Make at Least One Valid Path in a Grid</h1><h2 id="1、题目大意"><a href="#1、题目大意" class="headerlink" title="1、题目大意"></a>1、题目大意</h2><p>给定m*n个格子，grid[m][n]，对于每个格子grid[i][j]值为1~4</p>
+<ul>
+<li>1代表往右走，即下一个格子为grid[i][j + 1]</li>
+<li>2代表往左走，即下一个格子为grid[i][j - 1]</li>
+<li>3代表往下走，即下一个格子为grid[i + 1][j]</li>
+<li>4代表往上走，即下一个格子为grid[i - 1][j]</li>
+</ul>
+<p>问，从grid[0][0]走到grid[m - 1][n - 1]最少需要改变多少个格子的方向。</p>
+<p><img src="/2020/07/14/leetcode-1368/D:/blog\hexo\source\_posts\leetcode-1368\grid1.png" alt="img"></p>
+<p>这个例子需要至少改变三个格子的方向，如(0,0)，(1,0)，(2,3)这三个格子的方向。</p>
+<p><strong>范围：</strong></p>
+<ul>
+<li><code>m == grid.length</code></li>
+<li><code>n == grid[i].length</code></li>
+<li><code>1 &lt;= m, n &lt;= 100</code></li>
+</ul>
+<h2 id="2、思路"><a href="#2、思路" class="headerlink" title="2、思路"></a>2、思路</h2><p>分析此题，要求从左上角走到左下角，那么需要改变的格子数量最多不会超过m+n个。</p>
+<p>每个格子可能从四个方向过来最短，那么对每个格子求从(0,0)位置到自己位置的最短路，再不断更新最小值。</p>
+<p>通过bfs，首先将(0,0)位置加入队列，再更新相邻格子的最小值即可，直到无法更新即求得到(m-1,n-1)位置的最小值。</p>
+<h2 id="3、代码"><a href="#3、代码" class="headerlink" title="3、代码"></a>3、代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minCost</span><span class="params">(<span class="keyword">int</span>[][] grid)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">int</span> INF = <span class="number">1000</span>; </span><br><span class="line">        <span class="comment">//四个方向，这里左、右、下、上下标大小与题目方向1、2、3、4大小均相差1，方便进行运算</span></span><br><span class="line">        <span class="keyword">int</span> dx[] = &#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, -<span class="number">1</span>&#125;; </span><br><span class="line">        <span class="keyword">int</span> dy[] = &#123;<span class="number">1</span>, -<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> m = grid.length;</span><br><span class="line">        <span class="keyword">int</span> n = grid[<span class="number">0</span>].length;</span><br><span class="line">        <span class="keyword">int</span> dis[][] = <span class="keyword">new</span> <span class="keyword">int</span>[m][n];</span><br><span class="line">        <span class="comment">//初始化距离</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">                dis[i][j] = INF;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        dis[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        Queue&lt;<span class="keyword">int</span>[]&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        queue.offer(<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">0</span>, <span class="number">0</span>&#125;);</span><br><span class="line">        <span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">int</span>[] p = queue.poll();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">                <span class="keyword">int</span> nx = p[<span class="number">0</span>] + dx[i];</span><br><span class="line">                <span class="keyword">int</span> ny = p[<span class="number">1</span>] + dy[i];</span><br><span class="line">                <span class="keyword">if</span>(nx &gt;= <span class="number">0</span> &amp;&amp; nx &lt; m &amp;&amp; ny &gt;= <span class="number">0</span> &amp;&amp; ny &lt; n) &#123;</span><br><span class="line">                    <span class="keyword">int</span> d = <span class="number">0</span>;</span><br><span class="line">                    <span class="comment">//判断x=p[0],y=p[1]到nx,ny位置是否需要改变方向</span></span><br><span class="line">                    <span class="comment">//grid[p[0]][p[1]] - i 为1则说明方向一致，不需要改变</span></span><br><span class="line">                    <span class="keyword">if</span>(grid[p[<span class="number">0</span>]][p[<span class="number">1</span>]] - i != <span class="number">1</span>) d = <span class="number">1</span>;</span><br><span class="line">                    <span class="keyword">if</span>(dis[nx][ny] &gt; dis[p[<span class="number">0</span>]][p[<span class="number">1</span>]] + d) &#123;</span><br><span class="line">                        dis[nx][ny] = dis[p[<span class="number">0</span>]][p[<span class="number">1</span>]] + d;</span><br><span class="line">                        queue.offer(<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;nx, ny&#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dis[m - <span class="number">1</span>][n - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2020年07月14日 21:01</p>
+        <p>原始链接： <a class="post-url" href="/2020/07/14/leetcode-1368/" title="leetcode-1368">http://tanruidd.github.io/2020/07/14/leetcode-1368/</a></p>
+        <footer>
+            <a href="http://tanruidd.github.io">
+                <img src="/images/logo.png" alt="trtan">
+                trtan
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://tanruidd.github.io/2020/07/14/leetcode-1368/&title=《leetcode-1368》 — trtan&pic=http://tanruidd.github.ioimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://tanruidd.github.io/2020/07/14/leetcode-1368/&title=《leetcode-1368》 — trtan&source=学习永无止境" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://tanruidd.github.io/2020/07/14/leetcode-1368/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《leetcode-1368》 — trtan&url=http://tanruidd.github.io/2020/07/14/leetcode-1368/&via=http://tanruidd.github.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://tanruidd.github.io/2020/07/14/leetcode-1368/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://tanruidd.github.io/2020/07/14/leetcode-1368/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/leetcode/" class="color4">leetcode</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#leetcode1368-Minimum-Cost-to-Make-at-Least-One-Valid-Path-in-a-Grid"><span class="post-toc-text">leetcode1368-Minimum Cost to Make at Least One Valid Path in a Grid</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1、题目大意"><span class="post-toc-text">1、题目大意</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2、思路"><span class="post-toc-text">2、思路</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3、代码"><span class="post-toc-text">3、代码</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/04/leetcode42-Trapping-Rain-Water/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">leetcode42-Trapping Rain Water</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+
+
+
+<section id="comments" class="comments">
+  <style>
+    .comments{margin:30px;padding:10px;background:#fff}
+    @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+  </style>
+  <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "NQwmJS5F56MehSPpnbS9ie2h-gzGzoHsz",
+            app_key: "1Lr1u6sKBU9xAt8s2JdwY0uE",
+            placeholder: "来啊，快活啊!",
+            avatar:""
+        });
+    }
+</script>
+  </section>
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2020 trtan<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://tanruidd.github.io",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 0
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Java/">Java</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/First/" style="font-size: 10px;">First</a> <a href="/tags/Java正则/" style="font-size: 10px;">Java正则</a> <a href="/tags/Second/" style="font-size: 10px;">Second</a> <a href="/tags/leetcode/" style="font-size: 20px;">leetcode</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/First/" style="font-size: 10px;">First</a> <a href="/tags/Java正则/" style="font-size: 10px;">Java正则</a> <a href="/tags/Second/" style="font-size: 10px;">Second</a> <a href="/tags/leetcode/" style="font-size: 20px;">leetcode</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
