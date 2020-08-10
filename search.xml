@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Java-接口、lambda表达式、内部类</title>
+      <link href="/2020/07/15/Java-%E6%8E%A5%E5%8F%A3%E3%80%81lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB/"/>
+      <url>/2020/07/15/Java-%E6%8E%A5%E5%8F%A3%E3%80%81lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Java的接口、lambda表达式以及内部类"><a href="#Java的接口、lambda表达式以及内部类" class="headerlink" title="Java的接口、lambda表达式以及内部类"></a>Java的接口、lambda表达式以及内部类</h1><h2 id="一、接口"><a href="#一、接口" class="headerlink" title="一、接口"></a>一、接口</h2><h2 id="二、lambda表达式"><a href="#二、lambda表达式" class="headerlink" title="二、lambda表达式"></a>二、lambda表达式</h2><h2 id="三、内部类"><a href="#三、内部类" class="headerlink" title="三、内部类"></a>三、内部类</h2>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>leetcode-2020-7-15</title>
       <link href="/2020/07/15/leetcode-2020-7-15/"/>
       <url>/2020/07/15/leetcode-2020-7-15/</url>
